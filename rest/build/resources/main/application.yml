@@ -1,0 +1,13 @@
+---
+service:
+  title: restService
+spring:
+  data:
+      mongodb.uri: mongodb://localhost/kanjuice
+      mongodb.database: kanjuice
+      mongodb.repositories.enabled: true
+      rest.defaultPageSize: 200
+---
+server:
+  contextPath: /
+  port: 3000
