@@ -24,12 +24,8 @@ class DeviceController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    Device createOrUpdateUser(@RequestBody @Valid Device device) throws IOException {
+    Device createOrUpdateDevice(@RequestBody @Valid Device device) throws IOException {
         return deviceService.createOrUpdateDevice(device);
     }
 
-//    @RequestMapping(value = "/update", method = RequestMethod.POST)
-//    Device updateDevice(@RequestBody @Valid DeviceUpdateRequestDTO updateRequest) {
-//        return DeviceService.updateDevice(updateRequest);
-//    }
 }

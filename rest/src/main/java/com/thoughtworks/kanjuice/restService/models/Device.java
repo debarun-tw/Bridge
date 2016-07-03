@@ -2,6 +2,7 @@ package com.thoughtworks.kanjuice.restService.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sun.istack.internal.NotNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -22,18 +23,22 @@ public class Device {
     private String id;
 
     @JsonProperty
+    @NotNull
     @Field(DEVICE_ID)
     String deviceID;
 
     @JsonProperty
+    @NotNull
     @Field(LOCATION)
     String location;
 
     @JsonProperty
+    @NotNull
     @Field(GCM_TOKEN)
     String gcmToken;
 
     @JsonProperty
+    @NotNull
     @Field(OUTLET_TYPE)
     String outletType;
 

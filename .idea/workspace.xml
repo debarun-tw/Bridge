@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bef6b893-c2fa-4b4c-8dc2-9f12abdc3cba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/taskArtifacts.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/controllers/DeviceControllerTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/models/DeviceBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/models/DeviceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/repositories/AllDevicesTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/services/DeviceServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest/build/classes/main/com/thoughtworks/kanjuice/restService/controllers/DeviceController.class" afterPath="$PROJECT_DIR$/rest/build/classes/main/com/thoughtworks/kanjuice/restService/controllers/DeviceController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest/build/classes/main/com/thoughtworks/kanjuice/restService/models/Device.class" afterPath="$PROJECT_DIR$/rest/build/classes/main/com/thoughtworks/kanjuice/restService/models/Device.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest/build/classes/main/com/thoughtworks/kanjuice/restService/services/DeviceService.class" afterPath="$PROJECT_DIR$/rest/build/classes/main/com/thoughtworks/kanjuice/restService/services/DeviceService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/rest/rest_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/rest/rest_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/controllers/DeviceController.java" afterPath="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/controllers/DeviceController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/Device.java" afterPath="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/Device.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/services/DeviceService.java" afterPath="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/services/DeviceService.java" />
     </list>
     <ignored path="notificationService.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Device.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Device.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/Device.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/Application.java">
+      <file leaf-file-name="DeviceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/models/DeviceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+            <state relative-caret-position="420">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,37 +91,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServiceConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/config/ServiceConfig.java">
+      <file leaf-file-name="DeviceBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/models/DeviceBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="435">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractMongoRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/repositories/AbstractMongoRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="74" column="27" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1819#1820#0" expanded="true" />
-                <element signature="e#1867#1868#0" expanded="true" />
+                <element signature="e#147#148#0" expanded="true" />
+                <element signature="e#184#185#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+                <element signature="e#950#951#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,8 +109,22 @@
       <file leaf-file-name="DeviceService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/services/DeviceService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+            <state relative-caret-position="147">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#587#588#0" expanded="true" />
+                <element signature="e#631#632#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceServiceTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/services/DeviceServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,8 +135,20 @@
       <file leaf-file-name="DeviceController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/controllers/DeviceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+            <state relative-caret-position="330">
+              <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceControllerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/controllers/DeviceControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -159,24 +166,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DevicesMongoRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/repositories/DevicesMongoRepository.java">
+      <file leaf-file-name="AllDevices.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/repositories/AllDevices.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AllDevices.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/repositories/AllDevices.java">
+      <file leaf-file-name="AllDevicesTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/repositories/AllDevicesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="120">
+              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,6 +195,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -750,14 +758,19 @@
         <option value="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/controllers/DevicesController.java" />
         <option value="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/AllDevices.java" />
         <option value="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/Devices.java" />
-        <option value="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/controllers/DeviceController.java" />
         <option value="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/NSApplication.java" />
         <option value="$PROJECT_DIR$/rest/build.gradle" />
         <option value="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/repositories/DevicesMongoRepository.java" />
         <option value="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/repositories/AllDevices.java" />
         <option value="$PROJECT_DIR$/rest/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/services/DeviceService.java" />
+        <option value="$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/models/DeviceBuilder.java" />
+        <option value="$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/models/DeviceTest.java" />
         <option value="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/Device.java" />
+        <option value="$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/controllers/DeviceController.java" />
+        <option value="$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/controllers/DeviceControllerTest.java" />
+        <option value="$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/repositories/AllDevicesTest.java" />
+        <option value="$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/services/DeviceServiceTest.java" />
       </list>
     </option>
   </component>
@@ -897,12 +910,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="restService" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="restService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1071,40 +1106,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="restService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bridge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="restService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -1120,8 +1121,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.thoughtworks.kanjuice.restService.services" />
+      <recent name="com.thoughtworks.kanjuice.restService.repositories" />
+      <recent name="com.thoughtworks.kanjuice.restService.controllers" />
+      <recent name="com.thoughtworks.kanjuice.restService.models" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.thoughtworks.kanjuice.restService.models" />
       <recent name="com.thoughtworks.kanjuice.notificationService.models" />
@@ -1129,19 +1140,130 @@
       <recent name="com.thoughtworks.kanjuice.notificationService.services" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
-    <configuration default="false" name="NSApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.thoughtworks.kanjuice.restService.NSApplication" />
-      <module name="rest_main" />
+  <component name="RunManager" selected="JUnit.All in rest_test">
+    <configuration default="false" name="AllDevicesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.kanjuice.restService.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="rest_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.kanjuice.restService.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.kanjuice.restService.repositories.AllDevicesTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/rest" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.thoughtworks.kanjuice.restService.Application" />
-      <module name="rest_main" />
+    <configuration default="false" name="DeviceServiceTest.shouldCheckForExistingDeviceBeforeCreating" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.kanjuice.restService.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="rest_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.kanjuice.restService.services" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.kanjuice.restService.services.DeviceServiceTest" />
+      <option name="METHOD_NAME" value="shouldCheckForExistingDeviceBeforeCreating" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/rest" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DeviceServiceTest.shouldUpdateExistingDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.kanjuice.restService.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="rest_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.kanjuice.restService.services" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.kanjuice.restService.services.DeviceServiceTest" />
+      <option name="METHOD_NAME" value="shouldUpdateExistingDevice" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/rest" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in rest_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="rest_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/rest" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DeviceServiceTest.shouldCreateDeviceIfNotExisting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.kanjuice.restService.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="rest_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.kanjuice.restService.services" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.kanjuice.restService.services.DeviceServiceTest" />
+      <option name="METHOD_NAME" value="shouldCreateDeviceIfNotExisting" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/rest" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1545,19 +1667,28 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.NSApplication" />
-      <item index="1" class="java.lang.String" itemvalue="Spring Boot.Application" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.AllDevicesTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DeviceServiceTest.shouldCheckForExistingDeviceBeforeCreating" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DeviceServiceTest.shouldUpdateExistingDevice" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.All in rest_test" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DeviceServiceTest.shouldCreateDeviceIfNotExisting" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
-        <item index="1" class="java.lang.String" itemvalue="Spring Boot.NSApplication" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in rest_test" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DeviceServiceTest.shouldCreateDeviceIfNotExisting" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DeviceServiceTest.shouldUpdateExistingDevice" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DeviceServiceTest.shouldCheckForExistingDeviceBeforeCreating" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AllDevicesTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -1568,12 +1699,44 @@
       <updated>1467469883094</updated>
       <workItem from="1467469884375" duration="12632000" />
       <workItem from="1467487120834" duration="535000" />
-      <workItem from="1467522072919" duration="2435000" />
+      <workItem from="1467522072919" duration="12233000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_rest_test - 2016.07.03 at 14h 06m 40s.xml">
+      <configuration name="All in rest_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_rest_test - 2016.07.03 at 14h 11m 49s.xml">
+      <configuration name="All in rest_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_shouldCheckForExistingDeviceBeforeCreating - 2016.07.03 at 14h 03m 52s.xml">
+      <configuration name="DeviceServiceTest.shouldCheckForExistingDeviceBeforeCreating" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_shouldCreateDeviceIfNotExisting - 2016.07.03 at 14h 09m 00s.xml">
+      <configuration name="DeviceServiceTest.shouldCreateDeviceIfNotExisting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_shouldCreateDeviceIfNotExisting - 2016.07.03 at 14h 10m 54s.xml">
+      <configuration name="DeviceServiceTest.shouldCreateDeviceIfNotExisting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_shouldCreateDeviceIfNotExisting - 2016.07.03 at 14h 11m 13s.xml">
+      <configuration name="DeviceServiceTest.shouldCreateDeviceIfNotExisting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_shouldUpdateExistingDevice - 2016.07.03 at 14h 00m 40s.xml">
+      <configuration name="DeviceServiceTest.shouldUpdateExistingDevice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_shouldUpdateExistingDevice - 2016.07.03 at 14h 02m 19s.xml">
+      <configuration name="DeviceServiceTest.shouldUpdateExistingDevice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_shouldUpdateExistingDevice - 2016.07.03 at 14h 04m 52s.xml">
+      <configuration name="DeviceServiceTest.shouldUpdateExistingDevice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeviceServiceTest_shouldUpdateExistingDevice - 2016.07.03 at 14h 05m 03s.xml">
+      <configuration name="DeviceServiceTest.shouldUpdateExistingDevice" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15602000" />
+    <option name="totallyTimeSpent" value="25400000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -1587,7 +1750,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5029455" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.71318823" sideWeight="0.4970545" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.368758" sideWeight="0.4970545" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1595,25 +1758,27 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24248926" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13233191" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39948782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1621,32 +1786,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/config/ServiceConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1664,9 +1809,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#253#254#0" expanded="false" />
+            <element signature="e#292#293#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1689,6 +1834,8 @@
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1744,7 +1891,7 @@
         <state relative-caret-position="75">
           <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1754,7 +1901,7 @@
         <state relative-caret-position="60">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1764,9 +1911,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#253#254#0" expanded="false" />
+            <element signature="e#292#293#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1805,6 +1952,8 @@
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1885,6 +2034,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-94">
           <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1892,6 +2042,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1915,9 +2066,9 @@
         <state relative-caret-position="165">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#253#254#0" expanded="false" />
+            <element signature="e#292#293#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1927,7 +2078,7 @@
         <state relative-caret-position="195">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1937,7 +2088,7 @@
         <state relative-caret-position="90">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1956,32 +2107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/controllers/DeviceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/Devices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/repositories/AllDevices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2008,20 +2133,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/services/DeviceService.java">
+    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/Devices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        <state relative-caret-position="135">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/Device.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/models/Device.java">
+    <entry file="file://$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/models/DeviceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/models/DeviceBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="e#147#148#0" expanded="true" />
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/controllers/DeviceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/repositories/AllDevices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/repositories/AllDevicesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/controllers/DeviceControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/src/main/java/com/thoughtworks/kanjuice/restService/services/DeviceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/src/test/com/thoughtworks/kanjuice/restService/services/DeviceServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
