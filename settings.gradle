@@ -1,2 +1,2 @@
-rootProject.name = 'restService'
+rootProject.name = 'Bridge'
 include 'rest'

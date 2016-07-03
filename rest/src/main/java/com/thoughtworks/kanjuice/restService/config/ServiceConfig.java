@@ -7,10 +7,23 @@ import org.springframework.context.annotation.Configuration;
 public class ServiceConfig {
 
     @Value("${service.title}")
-    private String title;
+    public String title;
+
+    @Value("${service.gcm.url}")
+    public String gcmURL;
+
+    @Value("${service.gcm.authKey}")
+    public String gcmAuthorizationKey;
 
     public String getTitle() {
         return title;
     }
 
+    public String getGcmURL() {
+        return gcmURL;
+    }
+
+    public String getAuthKey() {
+        return gcmAuthorizationKey;
+    }
 }

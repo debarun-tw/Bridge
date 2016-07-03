@@ -36,4 +36,10 @@ public class DeviceService {
         }
     }
 
+    public Device findDeviceByID(String deviceID){
+        return allDevices.findByDeviceID(deviceID);
+    }
+
+
+
 }
