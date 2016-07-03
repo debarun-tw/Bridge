@@ -55,9 +55,7 @@ public class Device {
 
 
 
-    public String getDeviceID() {
-        return deviceID;
-    }
+    public String getDeviceID() { return deviceID;}
 
     public String getLocation() {
         return location;

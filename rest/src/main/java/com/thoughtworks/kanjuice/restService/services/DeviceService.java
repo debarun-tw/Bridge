@@ -23,11 +23,14 @@ public class DeviceService {
         Device existingDevice = allDevices.findByDeviceID(device.getDeviceID());
 
         if(existingDevice == null){
-            LOGGER.info("Creating New Device with device ID: ", device.getDeviceID());
+            LOGGER.info("Creating New Device [{}, {}, {}]",
+                    device.getDeviceID(),
+                    device.getLocation(),
+                    device.getOutletType());
             return allDevices.insert(device);
         }
         else {
-            LOGGER.info("Updating Device with device ID: ", device.getDeviceID());
+            LOGGER.info("Updating Device with device ID: [{}]", device.getDeviceID());
             existingDevice.updateDevice(device);
             return allDevices.save(existingDevice);
         }
