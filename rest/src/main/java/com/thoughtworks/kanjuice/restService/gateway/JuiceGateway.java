@@ -1,50 +1,58 @@
 package com.thoughtworks.kanjuice.restService.gateway;
 
-import com.google.android.gcm.server.InvalidRequestException;
-import com.google.android.gcm.server.Message;
-import com.google.android.gcm.server.Result;
-import com.google.android.gcm.server.Sender;
 import com.thoughtworks.kanjuice.restService.config.ServiceConfig;
-import com.thoughtworks.kanjuice.restService.services.DeviceService;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 
 @Service
 public class JuiceGateway {
-    private static final Logger LOGGER = LoggerFactory.getLogger(DeviceService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(JuiceGateway.class);
 
     private ServiceConfig serviceConfig;
+    private RestTemplate restTemplate;
 
     @Autowired
-    public JuiceGateway(ServiceConfig serviceConfig){
+    public JuiceGateway(RestTemplate restTemplate, ServiceConfig serviceConfig){
+        this.restTemplate = restTemplate;
         this.serviceConfig = serviceConfig;
     }
 
-    public boolean notify(String userID, String gcmRegId){
+    public boolean notify(String userID, String gcmRegId) throws IOException, KeyManagementException, NoSuchAlgorithmException {
+        String url = "https://gcm-http.googleapis.com/gcm/send";
         final String GCM_API_KEY = serviceConfig.getAuthKey();
-        final int retries = 3;
-        Sender sender = new Sender(GCM_API_KEY);
-        Message msg = new Message.Builder().addData("message",userID).build();
 
-        try {
-                Result result = sender.send(msg, gcmRegId, retries);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "key=" + GCM_API_KEY);
+        headers.setContentType(MediaType.APPLICATION_JSON);
 
-                if (StringUtils.isEmpty(result.getErrorCodeName())) {
-                    LOGGER.info("GCM Notification is sent successfully {}", result.toString());
-                    return true;
-                }
+        JSONObject payload = new JSONObject();
+        JSONObject message = new JSONObject();
 
-                LOGGER.error("Error occurred while sending push notification :" + result.getErrorCodeName());
+        message.put("title", "Thoughtworks");
+        message.put("message", userID);
 
-        } catch (InvalidRequestException e) {
-            LOGGER.error("Invalid Request");
-        } catch (IOException e) {
-            LOGGER.error("IO Exception");
+        payload.put("to", gcmRegId);
+        payload.put("data", message);
+
+        HttpEntity<String> entity = new HttpEntity<String>(payload.toString(), headers);
+
+        ResponseEntity<String> loginResponse = restTemplate
+                .exchange(url, HttpMethod.POST, entity, String.class);
+        if (loginResponse.getStatusCode() == HttpStatus.OK) {
+            JSONObject responseJson = new JSONObject(loginResponse.getBody());
+            LOGGER.info("GCM Request sent successfully : {}", responseJson.toString());
+            return true;
+        } else{
+            LOGGER.error(" Error while sending request : {}", loginResponse.getBody());
         }
         return false;
     }

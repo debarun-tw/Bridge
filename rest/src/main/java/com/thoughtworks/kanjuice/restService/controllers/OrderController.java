@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 
 @RestController
 @RequestMapping(value = "/order", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -25,7 +27,7 @@ class OrderController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    String createOrder(@RequestBody @Valid Order order) throws IOException, InvalidOrderTypeException {
+    String createOrder(@RequestBody @Valid Order order) throws IOException, InvalidOrderTypeException, NoSuchAlgorithmException, KeyManagementException {
         return orderService.createOrder(order);
     }
 }

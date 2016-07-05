@@ -10,10 +10,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+
 @Service
 public class OrderService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(DeviceService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(OrderService.class);
 
     private final JuiceGateway juiceGateway;
     private final DeviceService deviceService;
@@ -28,12 +32,12 @@ public class OrderService {
         return true;
     }
 
-    public boolean createOrderForJuice(Order order) {
+    public boolean createOrderForJuice(Order order) throws NoSuchAlgorithmException, KeyManagementException, IOException {
         String GCM_TOKEN = deviceService.findDeviceByID(order.getDeviceID()).getGcmToken();
         return juiceGateway.notify(order.getUserID(), GCM_TOKEN);
     }
 
-    public String createOrder(Order order) throws InvalidOrderTypeException {
+    public String createOrder(Order order) throws InvalidOrderTypeException, KeyManagementException, NoSuchAlgorithmException, IOException {
         boolean status = false;
         JSONObject responseObject = new JSONObject();
 
