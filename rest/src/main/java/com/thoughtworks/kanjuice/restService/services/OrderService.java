@@ -62,4 +62,9 @@ public class OrderService {
             responseObject.put("status", "failure");
             return new JsonMapper().toJson(responseObject);
         }
+
+    public String createOrder(String name, String deviceID, String userID) throws IOException, NoSuchAlgorithmException, InvalidOrderTypeException, KeyManagementException {
+        Order createOrderFromParameters = new Order(name, deviceID, userID);
+        return createOrder(createOrderFromParameters);
+    }
 }

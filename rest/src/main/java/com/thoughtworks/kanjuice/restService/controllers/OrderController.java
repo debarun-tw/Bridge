@@ -5,10 +5,7 @@ import com.thoughtworks.kanjuice.restService.models.Order;
 import com.thoughtworks.kanjuice.restService.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.io.IOException;
@@ -29,5 +26,10 @@ class OrderController {
     @RequestMapping(method = RequestMethod.POST)
     String createOrder(@RequestBody @Valid Order order) throws IOException, InvalidOrderTypeException, NoSuchAlgorithmException, KeyManagementException {
         return orderService.createOrder(order);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, params = {"type", "deviceID", "userID"})
+    public String createGetOrder(@RequestParam(name = "type") String type, @RequestParam(name = "deviceID") String deviceID, @RequestParam(name = "userID") String userID) throws KeyManagementException, NoSuchAlgorithmException, InvalidOrderTypeException, IOException {
+        return orderService.createOrder(type, deviceID, userID);
     }
 }

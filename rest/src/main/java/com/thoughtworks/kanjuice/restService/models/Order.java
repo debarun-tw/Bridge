@@ -24,6 +24,12 @@ public class Order {
 
     public Order(){}
 
+    public Order(String type, String deviceID, String userID) {
+        this.type = type;
+        this.deviceID = deviceID;
+        this.userID = userID;
+    }
+
     public String getType() {
         return type;
     }
