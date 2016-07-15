@@ -35,19 +35,27 @@ public class AdjuvantGateway {
         headers.add("Authorization", API_KEY);
         headers.setContentType(MediaType.APPLICATION_JSON);
 
+        LOGGER.info("Hitting this URL : {}", finalUrl );
 
-        HttpEntity<String> entity = new HttpEntity<String>(headers);
+        try {
 
-        ResponseEntity<User> userResponse = restTemplate
-                .exchange(finalUrl, HttpMethod.GET, entity, User.class);
+            HttpEntity<String> entity = new HttpEntity<String>(headers);
 
-        if (userResponse.getStatusCode() == HttpStatus.OK) {
-            JSONObject responseJson = new JSONObject(userResponse.getBody());
-            LOGGER.info("User sent successfully : {}", responseJson.toString());
-            return userResponse.getBody();
-        } else{
-            LOGGER.error(" Error while sending request : {}", userResponse.getBody());
-            return null;
+            ResponseEntity<User> userResponse = restTemplate
+                    .exchange(finalUrl, HttpMethod.GET, entity, User.class);
+
+            if (userResponse.getStatusCode() == HttpStatus.OK) {
+                JSONObject responseJson = new JSONObject(userResponse.getBody());
+                LOGGER.info("User sent successfully : {}", responseJson.toString());
+                return userResponse.getBody();
+            } else {
+                LOGGER.error(" Error while sending request : {}", userResponse.getBody());
+                return null;
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+            return new User();
         }
 
 
@@ -70,12 +78,19 @@ public class AdjuvantGateway {
 
         payload.put("drinks", drinks);
         payload.put("isSwipe", true);
+        if(getUserFromOrder(order).getEmpId().equals(null))
+            return false;
+
         payload.put("employeeId", getUserFromOrder(order).getEmpId());
         payload.put("employeeName", getUserFromOrder(order).getEmployeeName());
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", API_KEY);
         headers.setContentType(MediaType.APPLICATION_JSON);
+
+        LOGGER.info("URL : {}", url);
+        LOGGER.info("Headers: {}", headers.toString());
+        LOGGER.info("Payload: {}", payload.toString());
 
         HttpEntity<String> entity = new HttpEntity<String>(payload.toString(), headers);
 

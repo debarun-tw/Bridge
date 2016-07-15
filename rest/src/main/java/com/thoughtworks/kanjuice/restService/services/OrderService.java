@@ -5,6 +5,7 @@ import com.thoughtworks.kanjuice.restService.exceptions.InvalidOrderTypeExceptio
 import com.thoughtworks.kanjuice.restService.gateway.AdjuvantGateway;
 import com.thoughtworks.kanjuice.restService.gateway.JuiceGateway;
 import com.thoughtworks.kanjuice.restService.models.Order;
+import com.thoughtworks.kanjuice.restService.models.User;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,10 +46,13 @@ public class OrderService {
 
     public boolean createOrderForJuice(Order order) throws NoSuchAlgorithmException, KeyManagementException, IOException {
         String GCM_TOKEN = deviceService.findDeviceByID(order.getDeviceID()).getGcmToken();
-        String userID = adjuvantGateway.getUserFromOrder(order).getEmpId();
-        if(userID.equals(null))
-         return false;
-        return juiceGateway.notify(userID, GCM_TOKEN);
+        User user = adjuvantGateway.getUserFromOrder(order);
+        String userID = null;
+        if(user.getEmpId() == null)
+            userID = "";
+        else
+            userID = user.getEmpId();
+        return juiceGateway.notify(userID, order.getCardID(), GCM_TOKEN);
     }
 
     public String createOrder(Order order) throws InvalidOrderTypeException, KeyManagementException, NoSuchAlgorithmException, IOException, IllegalBlockSizeException, InvalidKeyException, BadPaddingException, ShortBufferException, NoSuchPaddingException {

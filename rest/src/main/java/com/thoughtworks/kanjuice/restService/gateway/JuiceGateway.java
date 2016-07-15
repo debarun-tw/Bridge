@@ -26,9 +26,11 @@ public class JuiceGateway {
         this.serviceConfig = serviceConfig;
     }
 
-    public boolean notify(String userID, String gcmRegId) throws IOException, KeyManagementException, NoSuchAlgorithmException {
+    public boolean notify(String userID, String cardID, String gcmRegId) throws IOException, KeyManagementException, NoSuchAlgorithmException {
         String url = "https://gcm-http.googleapis.com/gcm/send";
         final String GCM_API_KEY = serviceConfig.getAuthKey();
+
+        String messageToBeSent = cardID.concat(",").concat(userID);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", "key=" + GCM_API_KEY);
@@ -38,7 +40,9 @@ public class JuiceGateway {
         JSONObject message = new JSONObject();
 
         message.put("title", "Thoughtworks, Kanjuice");
-        message.put("message", userID);
+        message.put("message", messageToBeSent);
+
+        LOGGER.info("Sending following payload dor notification : {}", messageToBeSent);
 
         payload.put("to", gcmRegId);
         payload.put("data", message);
