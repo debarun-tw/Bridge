@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class Order {
 
     private static final String TYPE = "type";
-    private static final String USER_ID = "userID";
+    private static final String CARD_ID = "cardID";
     private static final String DEVICE_ID = "deviceID";
 
 
@@ -14,9 +14,9 @@ public class Order {
     @JsonProperty
     public String type;
 
-    @Field(USER_ID)
+    @Field(CARD_ID)
     @JsonProperty
-    public String userID;
+    public String cardID;
 
     @Field(DEVICE_ID)
     @JsonProperty
@@ -24,10 +24,10 @@ public class Order {
 
     public Order(){}
 
-    public Order(String type, String deviceID, String userID) {
+    public Order(String type, String deviceID, String cardID) {
         this.type = type;
         this.deviceID = deviceID;
-        this.userID = userID;
+        this.cardID = cardID;
     }
 
     public String getType() {
@@ -38,7 +38,7 @@ public class Order {
         return deviceID;
     }
 
-    public String getUserID() {
-        return userID;
+    public String getCardID() {
+        return cardID;
     }
 }

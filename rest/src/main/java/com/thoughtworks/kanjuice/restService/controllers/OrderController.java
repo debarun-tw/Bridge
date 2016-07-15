@@ -7,8 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.ShortBufferException;
 import javax.validation.Valid;
 import java.io.IOException;
+import java.security.InvalidKeyException;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 
@@ -24,12 +29,12 @@ class OrderController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    String createOrder(@RequestBody @Valid Order order) throws IOException, InvalidOrderTypeException, NoSuchAlgorithmException, KeyManagementException {
+    String createOrder(@RequestBody @Valid Order order) throws IOException, InvalidOrderTypeException, NoSuchAlgorithmException, KeyManagementException, InvalidKeyException, BadPaddingException, NoSuchPaddingException, ShortBufferException, IllegalBlockSizeException {
         return orderService.createOrder(order);
     }
 
-    @RequestMapping(method = RequestMethod.GET, params = {"type", "deviceID", "userID"})
-    public String createGetOrder(@RequestParam(name = "type") String type, @RequestParam(name = "deviceID") String deviceID, @RequestParam(name = "userID") String userID) throws KeyManagementException, NoSuchAlgorithmException, InvalidOrderTypeException, IOException {
-        return orderService.createOrder(type, deviceID, userID);
+    @RequestMapping(method = RequestMethod.GET, params = {"type", "deviceID", "cardID"})
+    public String createGetOrder(@RequestParam(name = "type") String type, @RequestParam(name = "deviceID") String deviceID, @RequestParam(name = "cardID") String cardID) throws KeyManagementException, NoSuchAlgorithmException, InvalidOrderTypeException, IOException, IllegalBlockSizeException, BadPaddingException, NoSuchPaddingException, ShortBufferException, InvalidKeyException {
+        return orderService.createOrder(type, deviceID, cardID);
     }
 }

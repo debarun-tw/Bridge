@@ -37,7 +37,7 @@ public class JuiceGateway {
         JSONObject payload = new JSONObject();
         JSONObject message = new JSONObject();
 
-        message.put("title", "Thoughtworks");
+        message.put("title", "Thoughtworks, Kanjuice");
         message.put("message", userID);
 
         payload.put("to", gcmRegId);
@@ -47,10 +47,14 @@ public class JuiceGateway {
 
         ResponseEntity<String> loginResponse = restTemplate
                 .exchange(url, HttpMethod.POST, entity, String.class);
+
         if (loginResponse.getStatusCode() == HttpStatus.OK) {
             JSONObject responseJson = new JSONObject(loginResponse.getBody());
-            LOGGER.info("GCM Request sent successfully : {}", responseJson.toString());
-            return true;
+            LOGGER.info("GCM Request sent, Response : {}", responseJson.toString());
+            if(Integer.parseInt(responseJson.get("success").toString()) > 0) {
+                LOGGER.info("Failed to send notification");
+                return true;
+            }
         } else{
             LOGGER.error(" Error while sending request : {}", loginResponse.getBody());
         }

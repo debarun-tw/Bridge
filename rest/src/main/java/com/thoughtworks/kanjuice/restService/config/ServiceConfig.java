@@ -15,6 +15,13 @@ public class ServiceConfig {
     @Value("${service.gcm.authKey}")
     public String gcmAuthorizationKey;
 
+    @Value("${service.adjuvant.authKey}")
+    public String adjuvantAuthorizationKey;
+
+    @Value("${service.adjuvant.url}")
+    public String adjuvantURL;
+
+
     public String getTitle() {
         return title;
     }
@@ -25,5 +32,13 @@ public class ServiceConfig {
 
     public String getAuthKey() {
         return gcmAuthorizationKey;
+    }
+
+    public String getAdjuvantAuthorizationKey() {
+        return adjuvantAuthorizationKey;
+    }
+
+    public String getAdjuvantURL() {
+        return adjuvantURL;
     }
 }

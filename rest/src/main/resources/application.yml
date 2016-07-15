@@ -4,6 +4,10 @@ service:
   gcm:
       url: https://gcm-http.googleapis.com/gcm/send
       authKey: ${GCM_KEY}
+  adjuvant:
+      url: http://10.132.127.212:8083
+      authKey: ${ADJUVANT_KEY}
+
 spring:
   data:
       mongodb.uri: mongodb://localhost/adjuvant
