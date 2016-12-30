@@ -56,7 +56,7 @@ public class JuiceGateway {
             JSONObject responseJson = new JSONObject(loginResponse.getBody());
             LOGGER.info("GCM Request sent, Response : {}", responseJson.toString());
             if(Integer.parseInt(responseJson.get("success").toString()) > 0) {
-                LOGGER.info("Failed to send notification");
+                LOGGER.info("Notification sent Successfully");
                 return true;
             }
         } else{

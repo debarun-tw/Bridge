@@ -1,6 +1,5 @@
 package com.thoughtworks.kanjuice.restService.services;
 
-import com.thoughtworks.kanjuice.restService.config.JsonMapper;
 import com.thoughtworks.kanjuice.restService.exceptions.InvalidOrderTypeException;
 import com.thoughtworks.kanjuice.restService.gateway.AdjuvantGateway;
 import com.thoughtworks.kanjuice.restService.gateway.JuiceGateway;
@@ -47,12 +46,10 @@ public class OrderService {
     public boolean createOrderForJuice(Order order) throws NoSuchAlgorithmException, KeyManagementException, IOException {
         String GCM_TOKEN = deviceService.findDeviceByID(order.getDeviceID()).getGcmToken();
         User user = adjuvantGateway.getUserFromOrder(order);
-        String userID = null;
-        if(user.getEmpId() == null)
-            userID = "";
-        else
-            userID = user.getEmpId();
-        return juiceGateway.notify(userID, order.getCardID(), GCM_TOKEN);
+        if(user != null) {
+            return juiceGateway.notify(user.getEmpId(), order.getCardID(), GCM_TOKEN);
+        }
+        return false;
     }
 
     public String createOrder(Order order) throws InvalidOrderTypeException, KeyManagementException, NoSuchAlgorithmException, IOException, IllegalBlockSizeException, InvalidKeyException, BadPaddingException, ShortBufferException, NoSuchPaddingException {
@@ -74,11 +71,11 @@ public class OrderService {
 
         if(status) {
             responseObject.put("status", "success");
-            return new JsonMapper().toJson(responseObject);
+            return "1";
         }
         else
             responseObject.put("status", "failure");
-            return new JsonMapper().toJson(responseObject);
+            return "0";
         }
 
     public String createOrder(String type, String deviceID, String userID) throws IOException, NoSuchAlgorithmException, InvalidOrderTypeException, KeyManagementException, InvalidKeyException, BadPaddingException, NoSuchPaddingException, ShortBufferException, IllegalBlockSizeException {

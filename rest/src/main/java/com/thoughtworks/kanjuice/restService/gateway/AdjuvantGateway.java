@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 @Service
@@ -38,27 +39,24 @@ public class AdjuvantGateway {
         LOGGER.info("Hitting this URL : {}", finalUrl );
 
         try {
-
             HttpEntity<String> entity = new HttpEntity<String>(headers);
 
             ResponseEntity<User> userResponse = restTemplate
                     .exchange(finalUrl, HttpMethod.GET, entity, User.class);
 
-            if (userResponse.getStatusCode() == HttpStatus.OK) {
-                JSONObject responseJson = new JSONObject(userResponse.getBody());
-                LOGGER.info("User sent successfully : {}", responseJson.toString());
-                return userResponse.getBody();
-            } else {
-                LOGGER.error(" Error while sending request : {}", userResponse.getBody());
-                return null;
-            }
 
-        }catch (Exception e){
-            e.printStackTrace();
-            return new User();
+            JSONObject responseJson = new JSONObject(userResponse.getBody());
+            LOGGER.info("User found : {}", responseJson.toString());
+            return userResponse.getBody();
+
+        }catch (HttpClientErrorException exception){
+            LOGGER.error("User not found / not registered");
+            return new User("","","");
         }
-
-
+        catch (Exception exception){
+            LOGGER.error("Unexpected error occured during sending request for userid");
+            return null;
+        }
     }
 
     public boolean createOrderForTea(Order order){
@@ -78,7 +76,7 @@ public class AdjuvantGateway {
 
         payload.put("drinks", drinks);
         payload.put("isSwipe", true);
-        if(getUserFromOrder(order).getEmpId().equals(null))
+        if(getUserFromOrder(order).getEmpId().equals(null) || getUserFromOrder(order).getEmpId().equals(""))
             return false;
 
         payload.put("employeeId", getUserFromOrder(order).getEmpId());
