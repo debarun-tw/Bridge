@@ -68,7 +68,6 @@ hs_err_pid*
 jetty-runner/### Gradle template
 .gradle
 gradlew*
-gradle/
 build/
 ws/build/
 application-overrides.yml
@@ -77,7 +76,8 @@ application-overrides.yml
 gradle-app.setting
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
 
 /rest/build/
 /rest/out/
