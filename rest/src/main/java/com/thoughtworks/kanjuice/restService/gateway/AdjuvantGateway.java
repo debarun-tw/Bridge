@@ -54,7 +54,7 @@ public class AdjuvantGateway {
             return new User("","","");
         }
         catch (Exception exception){
-            LOGGER.error("Unexpected error occured during sending request for userid");
+            LOGGER.error("Unexpected error occured during sending request for userid"+ exception.getMessage());
             return null;
         }
     }
