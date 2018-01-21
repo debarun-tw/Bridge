@@ -11,7 +11,7 @@ service:
 spring:
   data:
       mongodb.uri: ${MONGODB_URL}
-      mongodb.database: kanjuice
+      mongodb.database: ${MONGODB_NAME}
       mongodb.repositories.enabled: true
       rest.defaultPageSize: 200
 ---
