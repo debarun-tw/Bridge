@@ -1,0 +1,1 @@
+web:java $JAVA_OPTS -Dserver.port=9090 -jar rest/build/libs/*.jar
