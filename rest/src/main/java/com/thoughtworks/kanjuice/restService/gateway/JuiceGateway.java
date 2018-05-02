@@ -35,6 +35,9 @@ public class JuiceGateway {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", "key=" + GCM_API_KEY);
         headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.setPragma("no-cache");
+        headers.setCacheControl("no-cache");
+        headers.set("X-Content-Type-Options","nosniff");
 
         JSONObject payload = new JSONObject();
         JSONObject message = new JSONObject();

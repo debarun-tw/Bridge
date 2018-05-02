@@ -35,6 +35,9 @@ public class AdjuvantGateway {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", API_KEY);
         headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.setPragma("no-cache");
+        headers.setCacheControl("no-cache");
+        headers.set("X-Content-Type-Options","nosniff");
 
         LOGGER.info("Hitting this URL : {}", finalUrl );
 
@@ -85,6 +88,10 @@ public class AdjuvantGateway {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", API_KEY);
         headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.setPragma("no-cache");
+        headers.setCacheControl("no-cache");
+        headers.set("X-Content-Type-Options","nosniff");
+
 
         LOGGER.info("URL : {}", url);
         LOGGER.info("Headers: {}", headers.toString());
